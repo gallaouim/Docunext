@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && node scripts/generateSearch.mjs",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.20.0",
@@ -32,6 +33,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.7",
+    "husky": "^9",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
