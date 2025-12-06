@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Examples",
+    "path": "/docs/en/examples",
+    "content": " # Quick Examples This page demonstrates headings, links, code blocks, and an interactive Sandpack. ## Markdown features - Automatic headings anchors - GitHub-flavored Markdown tables | Feature | Status | |--------:|:------| | MDX | ✅ | | Search | ✅ | ## Code block ```ts export function hello(name: string) { return `Hello, ${name}!`; } ``` ## Sandpack preview <SandpackPreview /> "
+  },
+  {
+    "title": "FAQ",
+    "path": "/docs/en/faq",
+    "content": " # FAQ **How do I add a new doc?** Create a `.md` or `.mdx` file under `src/content/docs/<version>/<locale>/`. **How do I enable code previews?** Use the `<SandpackPreview />` component in MDX files. "
+  },
+  {
+    "title": "Getting Started",
+    "path": "/docs/en/getting-started",
+    "content": " Welcome to DocuNext — a documentation platform built on Next.js. ## Features - Markdown/MDX content - i18n and versioning - shadcn-style UI components - Built-in search - Sandpack code previews ## Code Preview <SandpackPreview /> "
+  },
+  {
+    "title": "Installation",
+    "path": "/docs/en/installation",
+    "content": " Install dependencies and start the dev server: ```bash npm install npm run dev ``` "
+  },
+  {
+    "title": "Overview",
+    "path": "/docs/en/overview",
+    "content": " # Overview DocuNext is a documentation platform built on Next.js. It supports: - Markdown and MDX content - i18n via route segments - Versioned docs - Client-side search - Sandpack code previews "
+  },
+  {
+    "title": "Examples",
+    "path": "/docs/examples",
+    "content": " # Quick Examples This page demonstrates headings, links, code blocks, and an interactive Sandpack. ## Markdown features - Automatic headings anchors - GitHub-flavored Markdown tables | Feature | Status | |--------:|:------| | MDX | ✅ | | Search | ✅ | ## Code block ```ts export function hello(name: string) { return `Hello, ${name}!`; } ``` ## Sandpack preview <SandpackPreview /> "
+  },
+  {
+    "title": "FAQ",
+    "path": "/docs/faq",
+    "content": " # FAQ **How do I add a new doc?** Create a `.md` or `.mdx` file under `src/content/docs/`. **How do I enable code previews?** Use the `<SandpackPreview />` component in MDX files. "
+  },
+  {
+    "title": "Getting Started",
+    "path": "/docs/getting-started",
+    "content": " Welcome to DocuNext — a documentation platform built on Next.js. ## Features - Markdown/MDX content - i18n and versioning - shadcn-style UI components - Built-in search - Sandpack code previews ## Code Preview <SandpackPreview /> "
+  },
+  {
+    "title": "Installation",
+    "path": "/docs/installation",
+    "content": " Install dependencies and start the dev server: ```bash npm install npm run dev ``` "
+  },
+  {
+    "title": "Overview",
+    "path": "/docs/overview",
+    "content": " # Overview DocuNext is a documentation platform built on Next.js. It supports: - Markdown and MDX content - i18n via route segments - Versioned docs - Client-side search - Sandpack code previews "
+  }
+]
