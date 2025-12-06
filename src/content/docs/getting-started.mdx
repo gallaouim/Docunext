@@ -1,0 +1,63 @@
+---
+title: Getting Started
+description: Introduction to DocuNext
+---
+Welcome to DocuNext — a documentation platform built on Next.js.
+
+## What’s Included
+
+- MDX support with GitHub-flavored markdown
+- Sidebar navigation and mobile drawer
+- Automatic table of contents (right summary)
+- Client-side search
+- Previous/Next navigation at the bottom of docs
+- Dark mode toggle (class-based)
+- Accent color tokens for consistent styling
+
+## Start the Dev Server
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000/docs/getting-started`.
+
+## Add a Doc Page
+
+1. Create a file under `src/content/docs/`, for example `src/content/docs/tutorial.mdx`.
+2. Add it to the order by editing `docsItems` in `src/components/site/Sidebar.tsx`.
+3. Visit `/docs/tutorial`.
+
+Example content:
+
+```mdx
+---
+title: Tutorial
+description: Learn by building
+---
+
+Write content in MDX. Use headings (`##`) to show in the Table of Contents.
+
+<SandpackPreview />
+```
+
+## Routing
+
+- Docs route: `/docs/[...slug]`
+- Files are flat under `src/content/docs/`. Nesting is supported by folders.
+- Static params are generated from available files.
+
+## Navigation
+
+- Previous/Next links appear at the bottom of each doc based on `docsItems`.
+- Change the order by editing `docsItems` in `src/components/site/Sidebar.tsx`.
+
+## Dark Mode and Accent
+
+- Toggle theme in the navbar.
+- Customize colors in `src/app/globals.css` via `--accent` and `--accent-soft`.
+
+## Code Preview
+
+<SandpackPreview />

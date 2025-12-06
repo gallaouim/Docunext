@@ -1,0 +1,36 @@
+---
+title: Installation
+description: Set up your DocuNext site
+---
+
+Install dependencies and start the dev server:
+
+```bash
+npm install
+npm run dev
+```
+
+## Scripts
+
+- `npm run dev` — start local development
+- `npm run build` — build the app and generate the search index
+- `npm start` — run the production build
+
+## Requirements
+
+- Node.js 18+
+- npm, pnpm, or yarn
+
+## Customize Styling
+
+- Edit `src/app/globals.css` and set `--accent` and `--accent-soft`.
+- Tailwind v4 utilities are available out of the box.
+
+## Content Structure
+
+- Add docs under `src/content/docs/` with `.md` or `.mdx`.
+- The platform supports nested folders; URL mirrors folder structure.
+
+## Ordering Docs
+
+- Update `docsItems` in `src/components/site/Sidebar.tsx` to control sidebar and prev/next order.
