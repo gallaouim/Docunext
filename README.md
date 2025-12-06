@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DocuNext — Next.js Documentation Platform
 
-## Getting Started
+DocuNext is a documentation platform built with Next.js and Tailwind, featuring MDX content, a sidebar with collapsible groups, an automatic table of contents, client-side search, and a polished UI with dark/light themes and accent colors.
 
-First, run the development server:
+## Features
+
+- Markdown/MDX with GitHub-flavored markdown
+- Sidebar navigation with collapsible groups and mobile drawer
+- Automatic table of contents (right summary)
+- Previous/Next navigation at the bottom of docs
+- Client-side search (FlexSearch) with prebuilt index
+- Dark mode toggle with class-based theming
+- Accent color tokens for consistent styling
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000/docs/getting-started`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Add docs under `src/content/docs/` as `.md` or `.mdx`.
+- Nested routes are supported via folders, e.g. `src/content/docs/tutorials/tutorial.mdx` → `/docs/tutorials/tutorial`.
 
-## Learn More
+## Ordering and Navigation
 
-To learn more about Next.js, take a look at the following resources:
+- Order is defined in `src/lib/docsNav.ts` via `docsItems`.
+- The sidebar and Prev/Next pager use this order (nested groups are flattened for paging).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Theming and Styling
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Toggle theme in the navbar.
+- Customize accent colors in `src/app/globals.css` via `--accent` and `--accent-soft`.
+- Tailwind v4 utilities and Typography plugin are enabled.
 
-## Deploy on Vercel
+## Search
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Client-side search reads from `public/search-index.json`.
+- The build script regenerates the index: `npm run build`.
+- Regenerate index only (without full build):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+node scripts/generateSearch.mjs
+```
+
+- When to run:
+  - After adding or editing `.md`/`.mdx` docs and you want search to reflect changes
+  - In CI/CD, running `npm run build` is sufficient, it includes index generation
+
+## Static Export
+
+To export as a static site:
+
+```bash
+npm run build
+npx next export
+```
+
+The static files will be in `out/`.
+Search index is generated during `npm run build` and included in the export.
+
+## Configuration
+
+- Social links for the navbar are set in `src/components/site/Navbar.tsx` via `GITHUB_URL` and `LINKEDIN_URL` constants.
+
+## Contributing
+
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Run lint: `npm run lint`
+4. Commit and push: `git commit -m "feat: your feature" && git push`
+5. Open a Pull Request
+
+## License
+
+Licensed under the MIT License. See `LICENSE` for details.
