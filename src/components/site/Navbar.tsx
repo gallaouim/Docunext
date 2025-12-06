@@ -15,7 +15,7 @@ export function Navbar() {
   const results = useMemo(() => (query ? search(query) : []), [query, search]);
   const isDark = resolvedTheme === "dark";
   const toggleTheme = () => setTheme(isDark ? "light" : "dark");
-  const GITHUB_URL = "https://github.com/your-org/your-repo";
+  const GITHUB_URL = "https://github.com/gallaouim";
   const LINKEDIN_URL = "https://www.linkedin.com/in/maher-gallaoui/";
 
   return (
