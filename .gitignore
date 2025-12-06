@@ -10,31 +10,45 @@
 !.yarn/releases
 !.yarn/versions
 
-# testing
-/coverage
-
-# next.js
+# build caches
 /.next/
 /out/
-
-# production
 /build
+/.turbo
+/.cache
 
-# misc
-.DS_Store
-*.pem
+# coverage
+/coverage
+/.nyc_output
 
-# debug
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+**/*.log
 
 # env files (can opt-in for committing if needed)
 .env*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.envrc
 
 # vercel
 .vercel
+
+# misc/editor
+.DS_Store
+Thumbs.db
+*.pem
+*.swp
+*.swo
+*.orig
+*.iml
+.vscode/
+.idea/
 
 # typescript
 *.tsbuildinfo
