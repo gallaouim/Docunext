@@ -1,5 +1,6 @@
 # Appodeal app-ads.txt Updated 17.11.2025
-
+# Meta Audience Network app-ads.txt
+facebook.com, 669812802086016, DIRECT, c3e20eee3f780d68
 # Appodeal
 appodeal.com, 260289, DIRECT
 
